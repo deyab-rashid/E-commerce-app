@@ -1,0 +1,15 @@
+<div>
+
+<!--  sign up seller -->
+  <p class="text-4xl font-semibold mt-1 p-[12px] text-center">
+    Sign-Up Seller
+  </p>
+
+<!-----------seller form------------>
+  <form  #sellerSignUp = "ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="flex flex-col gap-4 text-center m-auto items-center">
+    <input ngModel name="name" type="text" class="border border-purple-400 w-[300px] rounded-3xl pl-4 py-2" placeholder="Enter Name">
+    <input ngModel name="email"  type="email" class="border border-purple-400 w-[300px] rounded-3xl pl-4 py-2" placeholder="Enter valid Email">
+    <input ngModel name="password" type="password" class="border border-purple-400 w-[300px] rounded-3xl pl-4 py-2 " placeholder="Enter Password">
+    <button class="rounded-full px-6 bg-purple-400 text-white font-semibold py-2">SignUp</button>
+  </form>
+</div>
