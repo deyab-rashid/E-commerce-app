@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {SellerService} from '../../services/seller/seller-service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -12,7 +13,12 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 })
 export class SellerAuth {
 
-  signUp(data: any){
+  constructor(private _sellerService: SellerService) {
+  }
+
+
+  signUp(data: object){
     console.log(data);
+    this._sellerService.sellerSignUp(data).subscribe();
   }
 }
