@@ -12,7 +12,11 @@ export class SellerService {
   seller = this.baseUrl + '/seller';
   constructor(private http: HttpClient) {}
 
-  sellerSignUp(data:SellerSignUp): Observable<any> {
-      return this.http.post(this.seller,data)
+  sellerSignUp(data:SellerSignUp): boolean {
+        this.http.post(this.seller,data,{observe: 'response'}).subscribe((result)=>{
+          console.warn(result);
+      });
+
+      return false;
   }
 }

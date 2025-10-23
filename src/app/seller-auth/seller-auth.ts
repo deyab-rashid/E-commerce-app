@@ -22,11 +22,6 @@ export class SellerAuth {
 
   signUp(data: SellerSignUp){
     // console.log(data);
-    this._sellerService.sellerSignUp(data).subscribe((result)=>{
-      // console.warn(result);
-      if(result){
-          this._router.navigate(['seller-home']);
-      }
-    });
+    this._sellerService.sellerSignUp(data);
   }
 }
